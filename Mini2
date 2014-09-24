@@ -1,0 +1,74 @@
+<?php
+class RequestUI
+{
+    private static $ui;
+    
+    static function request()
+    {
+        //Heredoc wrapper
+        self::$ui=<<<UI
+        <!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="mini2.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script>
+	//If the script is placed in the head, it loads first
+	$(function ()
+	  {
+		$('nav li ul').hide().removeClass('slipaway');
+		$('nav li').hover(function () 
+		{
+			$('ul', this).stop().slideToggle(200);
+		});
+	});
+	</script>
+	</head>
+	<body>
+    <div>
+      <nav>
+        <ul>
+          <li> <a href="#">Products</a>
+            <ul class="slipaway">
+              <li><a href="#">jQuery Template</a></li>
+              <li><a href="#">PHP Survey</a></li>
+              <li><a href="#">Mobile Template</a></li>
+              <li><a href="#">MySQL Template</a></li>
+            </ul>
+          </li>
+          <li> <a href="#">Services</a>
+            <ul class="slipaway">
+              <li><a href="#">jQuery Development</a></li>
+              <li><a href="#">PHP Development</a></li>
+              <li><a href="#">Graphic Design</a></li>
+              <li><a href="#">Video Integration</a></li>
+            </ul>
+          </li>
+          <li> <a href="#">Maintenance</a>
+            <ul class="slipaway">
+              <li><a href="#">Full Maintenance</a></li>
+              <li><a href="#">Trouble Shooting</a></li>
+              <li><a href="#">Customer Representative</a></li>
+              <li><a href="#">Back End Support</a></li>
+            </ul>
+          </li>
+          <li> <a href="#">Team</a>
+            <ul class="slipaway">
+              <li><a href="#">Injustice League</a></li>
+              <li><a href="#">Avengers</a></li>
+              <li><a href="#">Justice League</a></li>
+              <li><a href="#">Sinister Six</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+</body>
+</html>
+UI;
+    echo self::$ui;
+    }  
+}
+RequestUI::request();
+?>
