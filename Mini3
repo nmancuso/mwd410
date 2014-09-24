@@ -1,0 +1,155 @@
+<?php
+class AUI
+{
+  private $acc;
+  function __construct()
+  {
+   $this->acc=<<<UI
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mini Assignment 3</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen"
+     href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+  
+  <style type="text/css">
+  body{
+    background: #4186D3;
+  }
+  
+  #tabs{
+    background: #FFCE73;
+  }
+  
+  #tabs ul{
+    background: #4186D3;
+  }
+  
+  #tabs ul li{
+    background: #FF9400;
+  }
+  
+   #accordion div{
+    background: #FFCE73;
+  }
+  
+  #accordion h3{
+    background: #FF9400;
+  }
+  </style>
+ 
+</head>
+<body>
+ 
+<div id="tabs">
+  <ul>
+    <li><a href="#mwdclass"><span>MWD 410</span></a></li>
+    <li><a href="#ectclass"><span>ECT 111</span></a></li>
+    <li><a href="#psyclass"><span>PSY 101</span></a></li>
+  </ul>
+  <div id="mwdclass">
+    <p>MWD 410 is the capstone course for the MWD degree. It is taught by William Sanders. You learn all about PHP and OOP. It is a great class. </p>
+  </div>
+  <div id="ectclass">
+    <p>ECT 111 is a required class with seeking the Network Administration specialization. You will learn about circuits. It is very math heavy.</p>
+  </div>
+  <div id="psyclass">
+    <p>PSY 101 is an elective that one can take for the MWD degree. In this class you learn basics about the human brain and why we think what we think.</p>
+  </div>
+</div>
+
+</br>
+
+
+<div id="accordion">
+  <h3>Favorite Music</h3>
+  <div>
+    <ul>
+      <li>Rock</li>
+      <li>Pop</li>
+      <li>Country</li>
+      <li>Reggae</li>
+      <li>R&B</li>
+    </ul>
+  </div>
+  <h3>Ideal Computers</h3>
+  <div>
+    <ul>
+      <li>Dell</li>
+      <li>Acer</li>
+      <li>Asus</li>
+      <li>Lenovo</li>
+      <li>Macbook</li>
+    </ul>
+  </div>
+  <h3>Career You most want to pursue</h3>
+  <div>
+    <ul>
+      <li>Network Administrator</li>
+      <li>Doctor</li>
+      <li>Professor</li>
+      <li>Uhart Dean</li>
+      <li>Author</li>
+    </ul>
+  </div>
+</div>
+
+</br>
+</br>
+
+<div id="datetimepicker" class="input-append date">
+    <input type="text"></input>
+    <span class="add-on">
+    <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+    </span>
+</div>
+
+
+</br>
+
+<script>
+$( "#tabs" ).tabs();
+$( "#accordion" ).accordion();
+
+$(function() {
+$( "#datepicker" ).datepicker();
+});
+
+</script>
+
+<script type="text/javascript"
+     src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+
+<script type="text/javascript"
+     src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+</script>
+
+<script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+</script>
+
+<script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+</script>
+
+<script type="text/javascript">
+      $('#datetimepicker').datetimepicker({
+        format: 'dd/MM/yyyy hh:mm:ss',
+        language: 'pt-BR'
+      });
+</script>
+ 
+</body>
+</html>
+UI;
+  echo $this->acc;
+ }
+}
+$worker= new AUI();
+?>
