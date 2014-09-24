@@ -1,0 +1,78 @@
+/*css */
+/*Color scheme: Honeydew from Kuler */
+/*e6f58e (mgreen), ccd068 (honeydew), f6fde7 (whitegreen), abad87 (lt olive), 787355 (med olive)   */
+
+/*The use of an asterisk in a CSS definition is a wildcard. It selects all elements within that portion of the DOM to apply attributes.
+Generally used in debugging and then removed once everything is where and how you want it. */
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+nav
+{
+    position: absolute;
+    left: 460px;
+    background: #718EA4;
+    color:#708EA4;
+    float: left;
+    font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+nav ul
+{
+    text-align: center;
+}
+nav ul li
+{
+    float: left;
+    display:inline-block;
+    position: relative;
+}
+nav ul li:hover
+{
+    background: #708EA4;
+}
+nav ul li a
+{
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none
+}
+nav ul li ul
+{
+    font-family:"Arial Narrow", sans-serif;
+    position: absolute;
+    width: 124px;
+    background: #123752;
+}
+nav ul li ul li
+{
+    margin: 0;
+    padding: 0;
+    width: 124px;
+}
+nav ul li ul li a
+{
+    display: block;
+    padding: 15px 10px;
+    color: #708EA4;
+    text-decoration: none;
+}
+
+nav ul li ul li:hover a
+{
+    background: #29516D;
+}
+nav ul li ul.slipaway
+{
+    display: none;
+}
+nav ul li:hover ul.slipaway
+{
+    display: block;
+}
+
+nav li{
+    text-align: center;
+}
